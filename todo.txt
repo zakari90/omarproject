@@ -1,0 +1,6 @@
+admine dashboard
+        clone next temlate
+        nextauth , clerk, auth0
+tailors dashboard
+        clone next temlate
+        nextauth , clerk, auth0
