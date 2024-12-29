@@ -44,11 +44,11 @@ export default function HeroSection() {
     <>
     <main id='hero' className=" overflow-hidden">
       <section className='h-screen relative'>     
-        <div className='w-full h-3/5 border-2 flex flex-col-reverse md:flex md:flex-row justify-around'>
-          <div className='mr-auto ml-auto border-2 md:w-1/2 flex flex-col justify-center '>
-          <h2 className="text-4xl  font-bold lg:w-[55%]">استمتع بتجربة <span className='text-primary'> تسوق</span> لا مثيل لها!
+        <div className='w-full h-3/5 border-2  flex flex-col-reverse md:flex md:flex-row justify-around'>
+          <div className=' z-[2] bg-white bg-opacity-50 mr-auto ml-auto border-2 md:w-1/2 flex flex-col justify-center '>
+          <h2 className="text-2xl md:text-4xl font-bold lg:w-[55%]">استمتع بتجربة <span className='text-primary'> تسوق</span> لا مثيل لها!
           </h2>
-          <p className="hidden md:block text-base text-secondary-foreground mt-6 mr-6 w-[80%] ">سواء كنت تبحث عن إطلالة رسمية أو كاجوال، لدينا كل ما تحتاجه لتكون دائماً في أفضل حال.</p>
+          <p className=" md:block text-base text-secondary-foreground mt-6 mr-6 w-[80%] ">سواء كنت تبحث عن إطلالة رسمية أو كاجوال، لدينا كل ما تحتاجه لتكون دائماً في أفضل حال.</p>
           <div className="flex w-4/5 mr-auto ml-auto h-9 lg:w-3/5 border-2 border-primary rounded-lg mt-4 ">
               <button
                   className={`inline-flex bg-primary w-9 h-full items-center justify-center 
@@ -74,13 +74,13 @@ export default function HeroSection() {
                   onChange={(e) => setSearchTerm(e.target.value)}
               />
         </div>
-          <div className='hidden ml-auto mr-auto sm:flex gap-4 text-secondary-foreground/80 mt-6'>
-            <div className='flex flex-col'>
+          <div className='flex ml-auto mr-auto gap-4 text-secondary-foreground/80 sm:mt-10 mt-6'>
+            <div className='flex flex-col sm:gap-8'>
             <p><CircleCheck fill='#F0B70D' className='text-secondary inline'/> ملابس عالية الجودة </p>
             <p><CircleCheck fill='#F0B70D' className='text-secondary inline'/> تصاميم فريدة وعصرية</p>
             </div>
 
-            <div className='flex flex-col'>
+            <div className='flex flex-col sm:gap-8'>
 
             <p><CircleCheck fill='#F0B70D' className='text-secondary inline'/> أسعار تنافسية</p>
             <p><CircleCheck fill='#F0B70D' className='text-secondary inline'/> خدمة عملاء مميزة </p>
@@ -94,48 +94,48 @@ export default function HeroSection() {
             <div className=' border-2 z-[-1] rotate-12 md:mt-8 absolute top-[100px] right-32 border-primary w-[90px] h-[90px] rounded-lg '/>
             <div className='w-full h-full lg:mt-4 relative top-7'>
               <Image 
-                src='/banner1.png'
+                src='/banner2.png'
                 width={800} height={800} 
                 alt='banner'
                 layout='responsive' 
-                className='z-[1] w-full h-full object-cover rounded-lg'
+                className='z-[1] scale-150 sm:scale-1 mt-2 w-full h-full object-cover rounded-lg '
               />
             </div>
           </div>
-          <div className=' md:mt-4 md:w-1/4 flex flex-col h-full justify-between md:justify-around'> 
+          <div className=' md:mt-4 md:w-1/4 flex flex-col gap-4 h-full justify-between md:justify-around'> 
             <Card className="w-[100px] h-[120px]  bg-[#FBEFED] border-[#949494] rounded-lg mx-auto p-2">
               <div className='bg-white rounded-lg'>
                 <Image
                   src={`/banner3.png`}
                   width={100}  // Image width
-                  height={60}  // Image height
+                  height={60}  
                   alt={`صورة العقار`}
                 />
               </div>
               <CardFooter className="text-xs text-center">
-                المزيد
+                نساء
               </CardFooter>
             </Card>
             <Card className="w-[100px] h-[120px] border-[#949494] rounded-lg mx-auto p-2">
               <div className='bg-white rounded-lg'>
                 <Image
-                  src={`/banner2.png`}
+                  src={`/banner1.png`}
                   width={100}  // Image width
                   height={60}  // Image height
                   alt={`صورة العقار`}
                 />
               </div>
               <CardFooter className="text-xs text-center">
-                المزيد
+              رجال
               </CardFooter>
             </Card>
           </div>
           </div>
         </div>
-        <div className='w-full md:h-2/5 bg-white bg-opacity-50 backdrop-blur-sm border-2 flex flex-wrap justify-around rounded-lg shadow-lg absolute bottom-0'>
+        <div className='w-full md:h-2/5 gap-3 pt-2 bg-primary/5 bg-opacity-50 backdrop-blur-sm border-2 flex flex-wrap justify-around rounded-lg shadow-lg absolute bottom-0'>
         
           {featuresData.map((card, index) => (
-            <Card key={index} className=" text-center w-[150px] h-[150px] mx-auto p-2 flex flex-col justify-center items-center">
+            <Card key={index} className=" mt-auto mb-auto text-center w-[150px] h-[150px] mx-auto p-2 flex flex-col justify-center items-center">
               <Image
                 src={card.imgSrc}
                 width={40}
@@ -143,7 +143,7 @@ export default function HeroSection() {
                 alt={`صورة ${card.title}`}
                 className="mx-auto"
               />
-              <div className="hidden md:block text-sm  mt-2">
+              <div className="hidden sm:block text-sm mt-2">
                 {card.title}
               </div>
               <div className="text-xs text-secondary-foreground/80 mt-1">

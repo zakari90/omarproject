@@ -31,12 +31,13 @@ function AboutSection() {
         {isExpanded ? 'اقل' : 'معرفة المزيد'}
       </p>
     </div>
-    <div className="w-full md:w-[30%] h-full">
+    <div className="w-full  md:w-[30%] h-full">
     <Image
         src="/size.png"
         width={300}  // Image width
         height={450}  // Image height
         alt={`صورة `}
+        className='ml-auto mr-auto'
       />
     </div>
   </div>

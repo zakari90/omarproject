@@ -101,7 +101,40 @@ export function NavBar() {
         </Button>
         </SheetTrigger>
         <SheetContent className="w-60" side="right">
-
+        <ul className="flex flex-col sm:flex-row sm:w-2/6 w-full sm:justify-around items-center mt-4 sm:mt-0">
+        <li>
+          <Link
+           href="/#hero"
+            className="block px-4 py-2 text-primary hover:bg-gray-100"
+          >
+            الرئيسية
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/#contact"
+            className="block px-4 py-2 text-secondary-foreground hover:bg-gray-100"
+          >
+            تواصل معنا
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/#about"
+            className="block px-4 py-2 text-secondary-foreground hover:bg-gray-100"
+          >
+            نبذة عنا
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/products"
+            className="block px-4 py-2 text-secondary-foreground underline underline-offset-2 underline-[20px] decoration-primary decoration-2"
+          >
+            التصنيفات
+          </Link>
+        </li>
+      </ul>
         </SheetContent>
         </Sheet>
       <div className="flex items-center gap-4">

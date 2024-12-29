@@ -2,7 +2,7 @@ git remote rm origin
 
 git init
 git add .
-git commit -m "first commit"
+git commit -m "first mobile banner"
 git branch -M main
 git remote add origin https://github.com/zakari90/omarproject.git
 git push -u origin main
