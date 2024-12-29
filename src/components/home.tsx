@@ -17,12 +17,12 @@ export default function HeroSection() {
     },
     {
       imgSrc: '/sewing-machine.png',
-      title: 'بكميات كبيرة',
-      description: 'توفير الملابس بكميات كبيرة..',
+      title: 'أثمنة مناسبة',
+      description: 'المنتوجات الاكثر طلبا تتوفر بثمن اقل.',
     },
     {
       imgSrc: '/fabric-pattern.png',
-      title: 'قياسات خاصة',
+      title: 'فصالة و خياطة',
       description: 'فصالة و خياطة تحت الطلب. ',
     },
     {
@@ -42,14 +42,14 @@ export default function HeroSection() {
 };
   return (
     <>
-    <main className=" overflow-hidden">
+    <main id='hero' className=" overflow-hidden">
       <section className='h-screen relative'>     
-        <div className='w-full h-3/5 border-2 flex flex-col-reverse md:flex-col justify-around'>
-          <div className='border-2 md:w-1/2 flex flex-col justify-center '>
-          <h2 className="text-4xl font-bold md:w-[55%]">استمتع بتجربة <span className='text-primary'> تسوق</span> لا مثيل لها!
+        <div className='w-full h-3/5 border-2 flex flex-col-reverse md:flex md:flex-row justify-around'>
+          <div className='mr-auto ml-auto border-2 md:w-1/2 flex flex-col justify-center '>
+          <h2 className="text-4xl  font-bold lg:w-[55%]">استمتع بتجربة <span className='text-primary'> تسوق</span> لا مثيل لها!
           </h2>
           <p className="hidden md:block text-base text-secondary-foreground mt-6 mr-6 w-[80%] ">سواء كنت تبحث عن إطلالة رسمية أو كاجوال، لدينا كل ما تحتاجه لتكون دائماً في أفضل حال.</p>
-          <div className="flex w-4/5 m-auto h-9 md:w-3/5 border-2 border-primary rounded-lg mt-4 ">
+          <div className="flex w-4/5 mr-auto ml-auto h-9 lg:w-3/5 border-2 border-primary rounded-lg mt-4 ">
               <button
                   className={`inline-flex bg-primary w-9 h-full items-center justify-center 
                     rounded-s-lg border border-input text-sm text-muted-foreground/80 ring-offset-background 
@@ -74,7 +74,7 @@ export default function HeroSection() {
                   onChange={(e) => setSearchTerm(e.target.value)}
               />
         </div>
-          <div className='hidden md:flex gap-4 text-secondary-foreground/80 mt-6'>
+          <div className='hidden ml-auto mr-auto sm:flex gap-4 text-secondary-foreground/80 mt-6'>
             <div className='flex flex-col'>
             <p><CircleCheck fill='#F0B70D' className='text-secondary inline'/> ملابس عالية الجودة </p>
             <p><CircleCheck fill='#F0B70D' className='text-secondary inline'/> تصاميم فريدة وعصرية</p>
@@ -88,11 +88,11 @@ export default function HeroSection() {
 
           </div>
           </div>
-          <div className='border-2 md:mt-8 md:w-1/2 flex  '>
-          <div className='border-2 md:mt-8 md:w-3/4 relative top-7'>
+          <div className=' mr-auto ml-auto md:mt-8 md:w-1/2 flex  '>
+          <div className=' md:mt-8 md:w-3/4 relative top-7 '>
             <div className=' border-2 z-[-1] -rotate-45 md:mt-8 absolute top-9 right-16 border-[#F0B810] w-[200px] h-[230px] rounded-lg '/>
             <div className=' border-2 z-[-1] rotate-12 md:mt-8 absolute top-[100px] right-32 border-primary w-[90px] h-[90px] rounded-lg '/>
-            <div className='w-full h-full md:mt-8 relative top-7'>
+            <div className='w-full h-full lg:mt-4 relative top-7'>
               <Image 
                 src='/banner1.png'
                 width={800} height={800} 
@@ -102,8 +102,8 @@ export default function HeroSection() {
               />
             </div>
           </div>
-          <div className='border-2 md:mt-4 md:w-1/4 flex flex-col h-full justify-between'> 
-            <Card className="w-[100px] h-[120px] border-2 bg-[#FBEFED] border-[#949494] rounded-lg mx-auto p-2">
+          <div className=' md:mt-4 md:w-1/4 flex flex-col h-full justify-between md:justify-around'> 
+            <Card className="w-[100px] h-[120px]  bg-[#FBEFED] border-[#949494] rounded-lg mx-auto p-2">
               <div className='bg-white rounded-lg'>
                 <Image
                   src={`/banner3.png`}
@@ -116,7 +116,7 @@ export default function HeroSection() {
                 المزيد
               </CardFooter>
             </Card>
-            <Card className="w-[100px] h-[120px] border-2  border-[#949494] rounded-lg mx-auto p-2">
+            <Card className="w-[100px] h-[120px] border-[#949494] rounded-lg mx-auto p-2">
               <div className='bg-white rounded-lg'>
                 <Image
                   src={`/banner2.png`}
@@ -132,7 +132,7 @@ export default function HeroSection() {
           </div>
           </div>
         </div>
-        <div className='w-full h-2/5 bg-white bg-opacity-50 backdrop-blur-sm border-2 flex flex-wrap justify-around rounded-lg shadow-lg absolute bottom-0'>
+        <div className='w-full md:h-2/5 bg-white bg-opacity-50 backdrop-blur-sm border-2 flex flex-wrap justify-around rounded-lg shadow-lg absolute bottom-0'>
         
           {featuresData.map((card, index) => (
             <Card key={index} className=" text-center w-[150px] h-[150px] mx-auto p-2 flex flex-col justify-center items-center">

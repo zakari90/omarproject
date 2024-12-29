@@ -104,25 +104,35 @@
   }
 }
   
-@keyframes moveText {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+@keyframes marquee {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
-.animate-move-text {
-  animation: moveText 10s linear infinite;
+.marquee {
+  animation: marquee 20s linear infinite;
 }
+@keyframes marqueeAr {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marqueeAr {
+  
+  animation: marqueeAr 20s linear infinite;
+}
+.news-bar-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 
-/* For IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/layout/navbar";
+import ClientFooter from "@/components/layout/clientFooter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,11 +52,17 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-full` }
       >
         
-        <section className='bg-black text-white text-center pb-0.5 rounded-e-full rounded-ss-full font-light animate-move-text overflow-hidden'>
-  سجل واحصل على خصم
-</section>      
+
+        <div 
+    className="w-full h-6 bg-secondary text-secondary-foreground text-center news-bar-container">
+      <div className={ 'bg-black text-white text-center pb-0.5 rounded-e-full rounded-ss-full font-light overflow-hidden marqueeAr'}>
+      سجل واحصل على خصم
+      </div>
+    </div>
+         
           <NavBar />
         {children}
+        <ClientFooter/>
       </body>
     </html>
   );

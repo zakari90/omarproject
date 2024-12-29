@@ -23,7 +23,6 @@ export function NavBar() {
     <header>
 
     <nav className="hidden md:flex shadow-md flex-col sm:flex-row justify-between p-4">
-      {/* Left side content */}
       <div className='flex justify-between items-center w-full sm:w-1/6'>
         <div className="flex items-center gap-4">
           <Button variant="ghost" className='bg-primary text-secondary'>
@@ -39,12 +38,10 @@ export function NavBar() {
           <ShoppingCart />
         </div>
       </div>
-
-      {/* Center menu items */}
       <ul className="flex flex-col sm:flex-row sm:w-2/6 w-full sm:justify-around items-center mt-4 sm:mt-0">
         <li>
           <Link
-            href="/about"
+           href="/#hero"
             className="block px-4 py-2 text-primary hover:bg-gray-100"
           >
             الرئيسية
@@ -52,7 +49,7 @@ export function NavBar() {
         </li>
         <li>
           <Link
-            href="/contact"
+            href="/#contact"
             className="block px-4 py-2 text-secondary-foreground hover:bg-gray-100"
           >
             تواصل معنا
@@ -60,7 +57,7 @@ export function NavBar() {
         </li>
         <li>
           <Link
-            href="/contact"
+            href="/#about"
             className="block px-4 py-2 text-secondary-foreground hover:bg-gray-100"
           >
             نبذة عنا
@@ -68,20 +65,18 @@ export function NavBar() {
         </li>
         <li>
           <Link
-            href="/contact"
+            href="/product"
             className="block px-4 py-2 text-secondary-foreground underline underline-offset-2 underline-[20px] decoration-primary decoration-2"
           >
             التصنيفات
           </Link>
         </li>
       </ul>
-
-      {/* Store logo */}
-      <div className="text-2xl font-bold text-primary mt-4 sm:mt-0">
-        <Link href="/">متجر <span className='text-[#F0B70D]'>علمقاس</span></Link>
+      <div className="text-2xl font-bold text-primary">
+        <Link href="/#hero">متجر <span className='text-[#F0B70D]'>علمقاس</span></Link>
       </div>
 
-      {/* Mobile Hamburger Menu */}
+      {/* Mobile Menu */}
       <div className="sm:hidden flex items-center mt-4">
             <button onClick={toggleMobileMenu} className="text-primary">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -126,7 +121,7 @@ export function NavBar() {
       </div>
       
         <div className="text-xl text-center font-bold text-primary mt-4 sm:mt-0">
-      <Link href="/">متجر <span className='text-[#F0B70D]'>علمقاس</span></Link>
+      <Link href="/#hero">متجر <span className='text-[#F0B70D]'>علمقاس</span></Link>
       </div>
       </div>
     </header>

@@ -1,9 +1,11 @@
 import React from 'react'
 import EmailjsComponent from './emailjsComponent'
 
-function ContactUs() {
+function ContactUsSection() {
   return (
-    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 ml-auto mr-auto mt-8">
+    <div id='contact' className="w-full flex flex-col md:flex-row justify-center content-around gap-8 ml-auto mr-auto mt-8">
+   
+   {/* <div className='w-5 h-5 bg-black' ></div> */}
     <div className='max-w-sm max-h-[400px] flex justify-center items-center'>
       <EmailjsComponent />
     </div>
@@ -19,4 +21,4 @@ function ContactUs() {
 )
 }
 
-export default ContactUs
+export default ContactUsSection
