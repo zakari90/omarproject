@@ -15,7 +15,7 @@ function ContactUsSection() {
         loading="lazy" 
         className="w-full h-full"
       ></iframe>
-      <div className='border-2 z-[-1] rotate-12  absolute -bottom-20 md:left-0 border-primary w-[180px] h-[180px] rounded-lg'/>
+      <div className='border-2 z-[-1] rotate-12 absolute -bottom-20 md:left-0 border-primary w-[180px] h-[180px] rounded-lg'/>
     </div>
   </div>
 )

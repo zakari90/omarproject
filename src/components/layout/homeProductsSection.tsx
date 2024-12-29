@@ -2,6 +2,8 @@
 import Image from 'next/image'
 import { useRef, useState } from 'react'
 import { Card } from '../ui/card'
+import { Button } from '../ui/button'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 function HomeProductsSection() {
     
@@ -9,6 +11,7 @@ function HomeProductsSection() {
       const [canScrollLeft, setCanScrollLeft] = useState(false)
       const [canScrollRight, setCanScrollRight] = useState(true)
     
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const handleScroll = () => {
         if (scrollContainerRef.current) {
           const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current
@@ -23,11 +26,6 @@ function HomeProductsSection() {
           scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' })
         }
       }
-      console.log('scrollContainerRef',canScrollRight);
-      console.log('canScrollLeft',canScrollLeft);
-      console.log('scrollContainerRef',handleScroll);
-      console.log('scrollContainerRef',scroll);
-    
       const productsData = [
         {
           imgSrc: '/banner1.png',
@@ -118,7 +116,8 @@ function HomeProductsSection() {
       </Card>
     ))}
   </div>    
-      {/* <Button
+      <div className='hidden md:block'>
+      <Button
         variant="outline"
         size="icon"
         className={`absolute left-0 top-1/2 -translate-y-1/2 ${!canScrollRight && 'opacity-50 cursor-not-allowed'}`}
@@ -132,10 +131,11 @@ function HomeProductsSection() {
         size="icon"
         className={`absolute right-0 top-1/2 -translate-y-1/2 ${!canScrollLeft && 'opacity-50 cursor-not-allowed'}`}
         onClick={() => scroll('right')}
-        disabled={!canScrollLeft}
+        // disabled={!canScrollLeft}
       >
         <ChevronRight className="h-4 w-4" />
-      </Button> */}
+      </Button>
+      </div>
      </section>
   )
 }
