@@ -48,10 +48,13 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full` }
       >
-      <section className='bg-black text-white text-center p-1 font-light'> سجل واحصل على خصم 20% على طلبك الأول. سجل الآن</section>
-      <NavBar />
+        
+        <section className='bg-black text-white text-center pb-0.5 rounded-e-full rounded-ss-full font-light animate-move-text overflow-hidden'>
+  سجل واحصل على خصم
+</section>      
+          <NavBar />
         {children}
       </body>
     </html>

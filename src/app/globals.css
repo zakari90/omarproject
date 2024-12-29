@@ -12,9 +12,7 @@
 
 @layer base {
   :root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
+
     /* Background and Foreground */
     --background: 0 0% 98.4%; /* #FAFAFA */
     --foreground: 15.6 5.6% 23.1%; /* #403C39 */
@@ -106,21 +104,18 @@
   }
 }
   
-@keyframes marquee {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-.marquee {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee 20s linear infinite;
+.animate-move-text {
+  animation: moveText 10s linear infinite;
 }
-@keyframes marqueeAr {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
