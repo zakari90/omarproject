@@ -23,7 +23,7 @@ function Page() {
         <div className="content">
           <div className="title-holder">
             <h1>Get ready for the change.</h1>
-            <p>Website coming soon. Please check back to know more. Shoot us an email if you're curious.</p>
+            <p>Website coming soon. Please check back to know more. Shoot us an email if you are curious.</p>
           </div>
           <a href="mailto:user@example.com">
             <div className="cta">Send us an email</div>
