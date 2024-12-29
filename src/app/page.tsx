@@ -1,6 +1,6 @@
-import HeroSection from "@/components/home";
 import AboutSection from "@/components/layout/aboutSection";
 import ContactUsSection from "@/components/layout/contactUsSection";
+import HeroSection from "@/components/layout/heroSection";
 import HomeProductsSection from "@/components/layout/homeProductsSection";
 import { SectionTitle } from "@/components/layout/sectionTitle";
 

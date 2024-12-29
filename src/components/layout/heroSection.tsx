@@ -74,7 +74,7 @@ export default function HeroSection() {
                   onChange={(e) => setSearchTerm(e.target.value)}
               />
         </div>
-          <div className='flex ml-auto mr-auto gap-4 text-secondary-foreground/80 sm:mt-10 mt-6'>
+          <div className='hidden md:flex ml-auto mr-auto gap-4 text-secondary-foreground/80 sm:mt-10 mt-6'>
             <div className='flex flex-col sm:gap-8'>
             <p><CircleCheck fill='#F0B70D' className='text-secondary inline'/> ملابس عالية الجودة </p>
             <p><CircleCheck fill='#F0B70D' className='text-secondary inline'/> تصاميم فريدة وعصرية</p>
